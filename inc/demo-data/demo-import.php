@@ -32,13 +32,11 @@ add_filter( 'pt-ocdi/import_files', 'sunshine_import_files' );
 function sunshine_after_import_setup() {
 	// Assign menus to their locations.
 	$main_menu    = get_term_by( 'name', 'Main Menu', 'nav_menu' );
-	$departments  = get_term_by( 'name', 'Departments', 'nav_menu' );
-	$useful_links = get_term_by( 'name', 'Useful Links', 'nav_menu' );
+	$footer_menu  = get_term_by( 'name', 'Footer Menu', 'nav_menu' );
 
 	set_theme_mod( 'nav_menu_locations', array(
 			'primary-menu' => $main_menu->term_id,
-			'departments'  => $departments->term_id,
-			'useful-links' => $useful_links->term_id,
+			'footer-menu' => $footer_menu->term_id,
 		)
 	);
 

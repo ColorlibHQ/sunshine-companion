@@ -34,7 +34,7 @@ class Sunshine_Wedding_Countdown extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-column';
+		return 'eicon-countdown';
 	}
 
 	public function get_categories() {
@@ -120,7 +120,7 @@ class Sunshine_Wedding_Countdown extends Widget_Base {
                 'label' => __( 'Sub Title Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info h2' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .weeding_countdown_area .section_title span' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -129,58 +129,28 @@ class Sunshine_Wedding_Countdown extends Widget_Base {
                 'label' => __( 'Sec Title Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .weeding_countdown_area .section_title h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'sec_text_col', [
-                'label' => __( 'Sec Text Color', 'sunshine-companion' ),
+            'counter_val_col', [
+                'label' => __( 'Counter Value Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info p' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info ul li' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .weeding_countdown_area .countdown_area .countdown_wrap h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'list_circle_col', [
-                'label' => __( 'List Item Icon Color', 'sunshine-companion' ),
+            'counter_title_col', [
+                'label' => __( 'Counter Title Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info ul li::before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .weeding_countdown_area .countdown_area .countdown_wrap span' => 'color: {{VALUE}};',
                 ],
             ]
         );
-
-        $this->add_control(
-            'btn_styles_seperator',
-            [
-                'label' => esc_html__( 'Button Styles', 'sunshine-companion' ),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'after'
-            ]
-        );
-        $this->add_control(
-            'btn_txt_col', [
-                'label' => __( 'Button Text & Border Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info .boxed-btn3-white-2' => 'color: {{VALUE}} !important; border-color: {{VALUE}}',
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info .boxed-btn3-white-2:hover' => 'background: {{VALUE}} !important; border-color: transparent',
-                ],
-            ]
-        );
-        $this->add_control(
-            'btn_hvr_col', [
-                'label' => __( 'Button Hover Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info .boxed-btn3-white-2:hover' => 'color: {{VALUE}} !important',
-                ],
-            ]
-        );
-
         $this->end_controls_section();
 
     }

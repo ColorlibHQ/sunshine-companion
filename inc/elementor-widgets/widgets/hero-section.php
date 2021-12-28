@@ -105,11 +105,29 @@ class Sunshine_Hero extends Widget_Base {
 			]
 		);
 		$this->add_control(
-			'big_title_col', [
-				'label' => __( 'Title Color', 'sunshine-companion' ),
+			'border_berore_col', [
+				'label' => __( 'Border 1 Color', 'sunshine-companion' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .slider_area .single_slider .slider_text h3' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .slider_area_inner .slider_text:before' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_control(
+			'border_after_col', [
+				'label' => __( 'Border 2 Color', 'sunshine-companion' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .slider_area_inner .slider_text:after' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_control(
+			'circle_bg_col', [
+				'label' => __( 'Circle Bg Color', 'sunshine-companion' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .slider_area_inner .slider_text' => 'background: {{VALUE}};',
 				],
 			]
 		);
@@ -118,64 +136,12 @@ class Sunshine_Hero extends Widget_Base {
 				'label' => __( 'Text Color', 'sunshine-companion' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .slider_area .single_slider .slider_text p' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .slider_area_inner .slider_text h4' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .slider_area_inner .slider_text h3' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .slider_area_inner .slider_text span' => 'color: {{VALUE}};',
 				],
 			]
-        );
-
-        $this->add_control(
-            'button_section_separator',
-            [
-                'label'     => __( 'Button Styles', 'sunshine-companion' ),
-                'type'      => Controls_Manager::HEADING,
-                'separator' => 'after',
-            ]
-        ); 
-        $this->add_control(
-			'button_col', [
-				'label' => __( 'Button Color', 'sunshine-companion' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .slider_area .single_slider .slider_text .boxed-btn3' => 'color: {{VALUE}} !important',
-				],
-			]
-        );
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'btn_bg_color',
-                'label' => __( 'Button BG Color', 'sunshine-companion' ),
-                'types' => [ 'gradient' ],
-                'selector' => '{{WRAPPER}} .slider_area .single_slider .slider_text .boxed-btn3',
-            ]
-        );
-
-        $this->add_control(
-            'button_hover_section_separator',
-            [
-                'label'     => __( 'Button Hover Styles', 'sunshine-companion' ),
-                'type'      => Controls_Manager::HEADING,
-                'separator' => 'after',
-            ]
-        ); 
-        $this->add_control(
-			'button_hover_col', [
-				'label' => __( 'Button Hover Color', 'sunshine-companion' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .slider_area .single_slider .slider_text .boxed-btn3:hover' => 'color: {{VALUE}} !important; border-color: {{VALUE}};',
-				],
-			]
-        );
-        $this->add_control(
-			'button_hover_bg_col', [
-				'label' => __( 'Button Hover Bg Color', 'sunshine-companion' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .slider_area .single_slider .slider_text .boxed-btn3:hover' => 'background: {{VALUE}};',
-				],
-			]
-        );
+		);
 
 		$this->end_controls_section();
 	}

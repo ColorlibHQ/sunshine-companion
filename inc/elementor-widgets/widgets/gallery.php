@@ -34,7 +34,7 @@ class Sunshine_Gallery extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-settings';
+		return 'eicon-gallery-justified';
 	}
 
 	public function get_categories() {
@@ -174,61 +174,7 @@ class Sunshine_Gallery extends Widget_Base {
                 'label' => __( 'Section Title Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .expert_doctors_area .doctors_title h3' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'single_item_styles_seperator',
-            [
-                'label' => esc_html__( 'Single Item Styles', 'sunshine-companion' ),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'after'
-            ]
-        );
-        $this->add_control(
-            'member_name_col', [
-                'label' => __( 'Member Name Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .expert_doctors_area .single_expert .experts_name h3' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'member_desig_color', [
-                'label' => __( 'Member Designation Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .expert_doctors_area .single_expert .experts_name span' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'single_item_bg_styles_seperator',
-            [
-                'label' => esc_html__( 'Single Item Bg Styles', 'sunshine-companion' ),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'after'
-            ]
-        );
-        $this->add_control(
-            'member_bg_color', [
-                'label' => __( 'Bg Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .expert_doctors_area .single_expert .experts_name' => 'background: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'hover_member_bg_color', [
-                'label' => __( 'Item Hover Bg Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .expert_doctors_area .single_expert:hover .experts_name' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .gallery_area .section_title h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -271,9 +217,6 @@ class Sunshine_Gallery extends Widget_Base {
                         
                         // Get the img size
                         switch ($img_size) {
-                            // case 'sunshine_gallery_thumb_601x410':
-                            //     $dynamic_class = 'col-xl-4 ';
-                            //     break;
                             case 'sunshine_gallery_thumb_482x410':
                                 $dynamic_class = 'col-xl-3 ';
                                 break;

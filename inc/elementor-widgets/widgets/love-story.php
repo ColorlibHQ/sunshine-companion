@@ -301,67 +301,33 @@ class Sunshine_Love_Story extends Widget_Base {
         );
 
         $this->add_control(
-            'sub_title_col', [
-                'label' => __( 'Sub Title Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info h2' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
             'sec_title_col', [
-                'label' => __( 'Sec Title Color', 'sunshine-companion' ),
+                'label' => __( 'Section Title Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .love_story_area .section_title h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'sec_text_col', [
-                'label' => __( 'Sec Text Color', 'sunshine-companion' ),
+            'heighlighted_col', [
+                'label' => __( 'Heighlighted Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info p' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info ul li' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .love_story_area .single_lover_story h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .love_story_area .weding_time_line .single_time_line h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .love_story_area .single_lover_story .social_links ul li a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .love_story_area .single_lover_story .social_links ul li a:hover' => 'background: {{VALUE}}; color: #fff',
                 ],
             ]
         );
         $this->add_control(
-            'list_circle_col', [
-                'label' => __( 'List Item Icon Color', 'sunshine-companion' ),
+            'second_heighlighted_col', [
+                'label' => __( 'Second Heighlighted Color', 'sunshine-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info ul li::before' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'btn_styles_seperator',
-            [
-                'label' => esc_html__( 'Button Styles', 'sunshine-companion' ),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'after'
-            ]
-        );
-        $this->add_control(
-            'btn_txt_col', [
-                'label' => __( 'Button Text & Border Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info .boxed-btn3-white-2' => 'color: {{VALUE}} !important; border-color: {{VALUE}}',
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info .boxed-btn3-white-2:hover' => 'background: {{VALUE}} !important; border-color: transparent',
-                ],
-            ]
-        );
-        $this->add_control(
-            'btn_hvr_col', [
-                'label' => __( 'Button Hover Color', 'sunshine-companion' ),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}} .welcome_sunshine_area .welcome_sunshine_info .boxed-btn3-white-2:hover' => 'color: {{VALUE}} !important',
+                    '{{WRAPPER}} .love_story_area .weding_time_line' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .love_story_area .single_lover_story .social_links ul li a' => 'background: {{VALUE}};',
                 ],
             ]
         );

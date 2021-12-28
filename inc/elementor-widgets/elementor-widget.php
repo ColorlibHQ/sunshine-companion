@@ -394,17 +394,9 @@ if ( !class_exists( 'Sunshine_El_Widgets' ) ) {
             require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/wedding-countdown.php';
             require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/love-story.php';
             require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/gallery.php';
-            require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/practice-area.php';
-            require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/review-section.php';
+            require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/program-details.php';
             require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/home-appointment.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/departments.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/business-expert-item.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/business-expert.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/emergency-contact-section.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/single-event.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/clients.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/faq-section.php';
-            // require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/projects.php';
+            require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/home-contact.php';
             require_once SUNSHINE_COMPANION_EW_DIR_PATH . 'widgets/contact.php';
         }
 
@@ -426,17 +418,9 @@ if ( !class_exists( 'Sunshine_El_Widgets' ) ) {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Wedding_Countdown() ); 
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Love_Story() ); 
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Gallery() ); 
-            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Practice_Area() ); 
-            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Review_Contents() ); 
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Program_Details() ); 
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Home_Appointment() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Departments() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Business_Expert_Tab_Items() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Business_Expert() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Emergency_Contact_Section() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Single_Event() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Client_Contents() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Faq_Section() ); 
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Projects() ); 
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Home_Contact() ); 
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Sunshineelementor\Widgets\Sunshine_Contact() ); 
         }
 
