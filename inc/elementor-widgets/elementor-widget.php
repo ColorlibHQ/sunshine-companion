@@ -319,7 +319,7 @@ if ( !class_exists( 'Sunshine_El_Widgets' ) ) {
             // map active js
             // wp_register_script( 'sunshine-map-active', plugins_url( 'assets/js/map-active.js', __FILE__ ), array('jquery'), '1.0', true );
             // sunshine companion main js
-            wp_enqueue_script( 'sunshine-companion', plugins_url( 'assets/js/sunshine-companion-main.js', __FILE__ ), array('jquery'), '1.0-s1', true );
+            wp_enqueue_script( 'sunshine-companion', plugins_url( 'assets/js/sunshine-companion-main.js', __FILE__ ), array( 'sunshine-ui-js' ), '1.0-s2', true );
 
 
         }

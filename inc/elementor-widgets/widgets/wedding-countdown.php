@@ -218,18 +218,27 @@ class Sunshine_Wedding_Countdown extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-            // testmonial_active
-            if ( $('#clock').length > 0 ) {
-				var clock = $('#clock');
-				var eventTime = clock.data('event-time');
-				clock.countdown(eventTime, function (event) {
-					$(this).html(event.strftime(
-						'<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'
-					));
-				});
-			}
-        })(jQuery);
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                // wedding countdown
+                var clock = document.getElementById('clock');
+                if (clock) {
+                    var eventTime = clock.getAttribute('data-event-time');
+                    UI.countdown(clock, eventTime, function (event) {
+                        clock.innerHTML = event.strftime(
+                            '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'
+                        );
+                    });
+                }
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

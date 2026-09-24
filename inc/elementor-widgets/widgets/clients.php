@@ -204,43 +204,52 @@ class Sunshine_Client_Contents extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-            // brand-active
-            $('.brand_active').owlCarousel({
-            loop:true,
-            margin:0,
-            items:1,
-            autoplay:true,
-            navText:['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
-            nav:false,
-            dots:false,
-            autoplayHoverPause: true,
-            autoplaySpeed: 800,
-            responsive:{
-                0:{
-                    items:2,
-                    dots:false,
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                // brand-active
+                UI.owl('.brand_active', {
+                    loop:true,
+                    margin:0,
+                    items:1,
+                    autoplay:true,
+                    navText:['<i class="fa-solid fa-angle-left"></i>','<i class="fa-solid fa-angle-right"></i>'],
                     nav:false,
-                },
-                767:{
-                    items:4,
                     dots:false,
-                    nav:false,
-                },
-                992:{
-                    items:5,
-                    nav:false
-                },
-                1200:{
-                    items:6,
-                    nav:false
-                },
-                1500:{
-                    items:6
-                }
+                    autoplayHoverPause: true,
+                    autoplaySpeed: 800,
+                    responsive:{
+                        0:{
+                            items:2,
+                            dots:false,
+                            nav:false,
+                        },
+                        767:{
+                            items:4,
+                            dots:false,
+                            nav:false,
+                        },
+                        992:{
+                            items:5,
+                            nav:false
+                        },
+                        1200:{
+                            items:6,
+                            nav:false
+                        },
+                        1500:{
+                            items:6
+                        }
+                    }
+                    });
             }
-            });            
-        })(jQuery);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }

@@ -61,8 +61,7 @@ function sunshine_section_heading( $title = '', $subtitle = '' ) {
 add_action( 'wp_enqueue_scripts', 'sunshine_companion_frontend_scripts', 99 );
 function sunshine_companion_frontend_scripts() {
 
-	wp_enqueue_script( 'sunshine-companion-script', plugins_url( '../js/loadmore-ajax.js', __FILE__ ), array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'sunshine-common-js', plugins_url( '../js/common.js', __FILE__ ), array( 'jquery' ), '1.0-s1', true );
+	wp_enqueue_script( 'sunshine-companion-script', plugins_url( '../js/loadmore-ajax.js', __FILE__ ), array( 'masonry', 'sunshine-ui-js' ), '1.0-s2', true );
 
 }
 // 
