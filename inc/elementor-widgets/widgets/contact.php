@@ -82,17 +82,17 @@ class Sunshine_Contact extends Widget_Base {
                     [
                         'label' => esc_html__( 'Buttonwood, California.', 'sunshine-companion' ),
                         'desc'  => esc_html__( 'Rosemead, CA 91770', 'sunshine-companion' ),
-                        'icon'  => 'fa fa-home',
+                        'icon'  => 'fa-solid fa-home',
                     ],
                     [
                         'label' => esc_html__( '00 (440) 9865 562', 'sunshine-companion' ),
                         'desc'  => esc_html__( 'Mon to Fri 9am to 6pm', 'sunshine-companion' ),
-                        'icon'  => 'fa fa-tablet',
+                        'icon'  => 'fa-solid fa-tablet',
                     ],
                     [
                         'label' => esc_html__( 'support@colorlib.com', 'sunshine-companion' ),
                         'desc'  => esc_html__( 'Send us your query anytime!', 'sunshine-companion' ),
-                        'icon'  => 'fa fa-envelope-o',
+                        'icon'  => 'fa-regular fa-envelope',
                     ],                    
                 ]
             ]

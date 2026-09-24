@@ -402,13 +402,13 @@ class Sunshine_Love_Story extends Widget_Base {
                             <ul>
                                 <?php 
                                 if ( $fb_url ) { 
-                                    echo '<li><a href="'.esc_url($fb_url).'"> <i class="fa fa-facebook"></i> </a></li>';
+                                    echo '<li><a href="'.esc_url($fb_url).'"> <i class="fa-brands fa-facebook"></i> </a></li>';
                                 }
                                 if ( $tw_url ) { 
-                                    echo '<li><a href="'.esc_url($tw_url).'"> <i class="fa fa-twitter"></i> </a></li>';
+                                    echo '<li><a href="'.esc_url($tw_url).'"> <i class="fa-brands fa-twitter"></i> </a></li>';
                                 }
                                 if ( $ins_url ) { 
-                                    echo '<li><a href="'.esc_url($ins_url).'"> <i class="fa fa-instagram"></i> </a></li>';
+                                    echo '<li><a href="'.esc_url($ins_url).'"> <i class="fa-brands fa-instagram"></i> </a></li>';
                                 }
                                 ?>
                             </ul>
@@ -461,13 +461,13 @@ class Sunshine_Love_Story extends Widget_Base {
                             <ul>
                                 <?php 
                                     if ( $right_fb_url ) { 
-                                        echo '<li><a href="'.esc_url($right_fb_url).'"> <i class="fa fa-facebook"></i> </a></li>';
+                                        echo '<li><a href="'.esc_url($right_fb_url).'"> <i class="fa-brands fa-facebook"></i> </a></li>';
                                     }
                                     if ( $right_tw_url ) { 
-                                        echo '<li><a href="'.esc_url($right_tw_url).'"> <i class="fa fa-twitter"></i> </a></li>';
+                                        echo '<li><a href="'.esc_url($right_tw_url).'"> <i class="fa-brands fa-twitter"></i> </a></li>';
                                     }
                                     if ( $right_ins_url ) { 
-                                        echo '<li><a href="'.esc_url($right_ins_url).'"> <i class="fa fa-instagram"></i> </a></li>';
+                                        echo '<li><a href="'.esc_url($right_ins_url).'"> <i class="fa-brands fa-instagram"></i> </a></li>';
                                     }
                                 ?>
                             </ul>
